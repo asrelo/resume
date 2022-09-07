@@ -31,7 +31,7 @@ timezone: Europe/Moscow
 
 # Build Command Options
 strict_front_matter: true
-baseurl: ""
+baseurl: "/resume"
 
 # Serve Command Options
 port: 4004
@@ -50,7 +50,7 @@ title: Сыропятов Вячеслав Владимирович
 email: syrslava@yandex.ru
 description: >-
   Резюме, Сыропятов Вячеслав Владимирович
-url: "https://syropiatov-jr-resume.website.yandexcloud.net"
+url: "https://asrelo.github.io"
 yandex_metrika_enabled: true
 collections:
   posts:
