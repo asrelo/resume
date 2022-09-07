@@ -1,0 +1,12 @@
+---
+# Main scss file
+---
+@charset "utf-8";
+
+$baseurl: "{{ site.baseurl }}";
+
+@import
+  'normalize',
+  'biscuit',
+  'syntax',
+  'custom';

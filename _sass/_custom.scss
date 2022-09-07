@@ -1,0 +1,108 @@
+@import 'common_vars';
+
+$applicant-head-first-height-mult: 0.9;
+
+.application-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem * $applicant-head-first-height-mult;
+}
+
+.application-head-first {
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+}
+
+.applicant-name {
+  font-size: 2rem * $applicant-head-first-height-mult;
+  line-height: 1.1;
+}
+
+.application-head-second {
+  margin: 0 auto;
+}
+
+.applicant-photo {
+  box-shadow: 3px 2px 3px 0px #888;
+  min-height: 8rem;
+  max-height: 12rem;
+  margin: 0 auto;
+}
+
+@media (min-width: $layout-switch-width)  {
+
+  $applicant-head-first-height-mult: 1;
+  $photo-width: $layout-switch-width / 3;
+
+  .application-head {
+    display: flex;
+    flex-direction: row;
+    gap: 1.6rem;
+    margin-bottom: inherit;
+  }
+
+  .application-head-first {
+    flex-grow: 1;
+  }
+
+  .applicant-name {
+    margin-bottom: 1.2rem;
+  }
+
+  .applicant-photo {
+    min-height: 8rem;
+    max-height: 15rem;
+  }
+
+}
+
+.application-head + h2 {
+  margin-top: 1rem;
+}
+
+.fake-space {
+  display: inline-block;
+  width: 0.2em;
+}
+
+.weak-em {
+  font-weight: 600;
+}
+
+.email-address, .phone-number {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.download-link:before {
+  content: "";
+  display: inline-block;
+  background-image: url($baseurl + "/assets/icon-download.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 1em;
+  width: 1em;
+  float: left;
+  margin: 0.2em 0.3em 0 0;
+}
+
+@media print {
+  .download-link {
+    display: none;
+  }
+}
+
+.application-cases > li {
+  margin-bottom: 0.4em;
+}
+
+.page-not-found-container {
+  font-family: monospace;
+  font-size: 200%;
+  text-align: center;
+  width: 100%;
+  p {
+    line-height: 1;
+  }
+}
